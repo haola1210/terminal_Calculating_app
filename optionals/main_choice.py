@@ -1,5 +1,6 @@
 from supports import verify_input as vI
 from core import infix_to_postfix as itp
+from core import cal_postfix_to_result as ptr
 menu = """ 
 \t SUPER CALCULATOR FX6969
 
@@ -21,5 +22,6 @@ def choice():
 		response = vI.check(["A","B","C","D"], choose)
 	if(response == "A"):
 		express = input("Type your express under this !\n")
-		result = itp.infix_to_postfix(express)
+		postfix = itp.infix_to_postfix(express)
+		result = ptr.Cal(postfix)
 		print(result)

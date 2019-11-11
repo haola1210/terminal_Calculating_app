@@ -18,5 +18,5 @@ def Cal(Postfix):
             elif i == '-':
                 stack.append(stack.pop() + stack.pop())
     return stack.pop()
-print(Cal(Postfix=['4','2','/']))
+
             

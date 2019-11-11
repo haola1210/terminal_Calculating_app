@@ -1,4 +1,5 @@
 from supports import verify_input as vI
+from core import infix_to_postfix as itp
 menu = """ 
 \t SUPER CALCULATOR FX6969
 
@@ -18,4 +19,7 @@ def choice():
 		print(response)
 		choose = input("Choice again => ")
 		response = vI.check(["A","B","C","D"], choose)
-	print(choose)
+	if(response == "A"):
+		express = input("Type your express under this !\n")
+		result = itp.infix_to_postfix(express)
+		print(result)

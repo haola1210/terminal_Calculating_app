@@ -6,17 +6,19 @@ def Cal(Postfix):
             stack.append(int(i))
         else: 
             if i == '^': 
-                stack.append(math.pow(stack.pop(),stack.pop()))
+                stack_sencond = stack.pop()
+                stack.append(math.pow(stack.pop(),stack_sencond))
             elif i == 'sqrt':
-                stack.append(math.sqrt(stack.pop(),stack.pop()))
+                stack.append(math.sqrt(stack.pop()))
             elif i == '*':
-                stack.append(stack.pop() * stack.pop())
+                stack_sencond = stack.pop()
+                stack.append(stack.pop() * stack_sencond)
             elif i == '/': 
-                stack.append(stack.pop() / stack.pop())
+                stack_sencond = stack.pop()
+                stack.append(stack.pop() / stack_sencond)
             elif i == '+': 
                 stack.append(stack.pop() + stack.pop())
             elif i == '-':
                 stack.append(stack.pop() + stack.pop())
-    return stack.pop()
-
+    return stack[-1]
             

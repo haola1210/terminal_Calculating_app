@@ -3,7 +3,6 @@ def infix_to_postfix(express):
 	Postfix = []
 	stack = []
 	infix = sC.make_infix(express)
-	print(infix)
 	for i in infix:
 		if not sC.isOperator(i) and i != "(" and i != ")":
 			Postfix.append(i)

@@ -7,7 +7,7 @@ def check(keys, input):
 		for key in keys:
 			strKeys += key + ","
 		strKeys += "]"
-		if re.search(strKeys, input):
-			return input
+		if re.search(strKeys, input.upper()):
+			return input.upper()
 		else:
 			return "Wrong key!"

@@ -23,6 +23,5 @@ def choice():
 	if(response == "A"):
 		express = input("Type your express under this !\n")
 		postfix = itp.infix_to_postfix(express)
-		print(postfix)
-		# result = ptr.Cal(postfix)
-		# print(result)
+		result = ptr.Cal(postfix)
+		print("result = ", result)

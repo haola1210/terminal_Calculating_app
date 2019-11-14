@@ -1,9 +1,32 @@
+import string
+
 option_type = {
     "A": ["Binary", 2],
     "B": ["Octal", 8],
     "C": ["Decimal", 10],
     "D": ["Hexadecimal", 16]
 }
+
+def check_number(number, type):
+    if type != "D":
+        list_first_check = map(
+            lambda element: (
+                element.isdigit() and 
+                int(element)<option_type[type][1]
+            ),
+            list(number)
+        )
+        if False in list_first_check:
+            return False
+    if type == "D":
+        default = '1234567890abcdef'
+        list_second_check = map(
+            lambda element: element in default,
+            list(number)
+        )
+        if False in list_second_check:
+            return False
+    return True
 
 def decimal_to_other(number, type):
     result = ""
